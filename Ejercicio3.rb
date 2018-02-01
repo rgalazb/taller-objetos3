@@ -10,16 +10,21 @@ class Vehicle
 end
 
 class Car < Vehicle
-  attr_reader :model, :year
+  attr_reader :model, :year, :start
   @@cantidad = 0
   def initialize(model, year)
     super(model, year)
     @@cantidad += 1
   end
-  def enginer_start
-    super.engine_start
+  def engine_start
+    super
+    puts 'el motor se ha encendido'
   end
   def self.cantidad
     @@cantidad
   end
 end
+auto = Car.new('corola',1993)
+
+
+ve = Vehicle.new('moto',1994)
