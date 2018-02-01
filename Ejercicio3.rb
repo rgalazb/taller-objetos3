@@ -13,7 +13,7 @@ class Car < Vehicle
   attr_reader :model, :year, :start
   @@cantidad = 0
   def initialize(model, year)
-    super(model, year)
+    super
     @@cantidad += 1
   end
   def engine_start
