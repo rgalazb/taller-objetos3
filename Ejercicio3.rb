@@ -24,7 +24,11 @@ class Car < Vehicle
     @@cantidad
   end
 end
-auto = Car.new('corola',1993)
+modelos = ['swift','maruti','lada','v16']
+autos = []
 
+10.times do
+  autos << Car.new(modelos.sample,rand(1990..2018))
+end
 
-ve = Vehicle.new('moto',1994)
+puts Car.cantidad
